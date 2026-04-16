@@ -6,40 +6,32 @@
 		<title>Student Life Cycle Overview at Madison College</title>
 		<style>
 			:root {
-			      --bg: #f7f9fc;
-				  --surface: #ffffff;
-				  --surface-2: #f8fbff;
-				  --surface-3: #eef4ff;
-				  --text: #162033;
-				  --muted: #62708a;
-				  --primary: #2563eb;
-				  --secondary: #7c3aed;
-				  --accent: #10b981;
-				  --warning: #f59e0b;
-				  --danger: #ef4444;
-				  --border: #dce5f2;
-				  --shadow: 0 18px 45px rgba(17, 35, 68, 0.08);
-				  --shadow-soft: 0 8px 24px rgba(17, 35, 68, 0.06);
-				  --radius: 22px;
-				  --max: 1600px;
-				  --c1: #6366f1;
-				  --c1-soft: #eef2ff;
-				  --c2: #8b5cf6;
-				  --c2-soft: #f3e8ff;
-				  --c3: #f97316;
-				  --c3-soft: #ffedd5;
-				  --c4: #ef4444;
-				  --c4-soft: #fee2e2;
-				  --c5: #10b981;
-				  --c5-soft: #dcfce7;
-				  --c6: #14b8a6;
-				  --c6-soft: #ccfbf1;
-				  --c7: #a855f7;
-				  --c7-soft: #f3e8ff;
-				  --c8: #f59e0b;
-				  --c8-soft: #fef3c7;
-				  --c9: #fb7185;
-				  --c9-soft: #ffe4e6;
+					--bg: #f7f9fc;
+					--surface: #ffffff;
+					--surface-2: #f8fbff;
+					--surface-3: #eef4ff;
+					--text: #162033;
+					--muted: #62708a;
+					--primary: #2563eb;
+					--secondary: #7c3aed;
+					--accent: #10b981;
+					--warning: #f59e0b;
+					--danger: #ef4444;
+					--border: #dce5f2;
+					--shadow: 0 18px 45px rgba(17, 35, 68, 0.08);
+					--shadow-soft: 0 8px 24px rgba(17, 35, 68, 0.06);
+					--radius: 22px;
+					--max: 1600px;
+
+					--c1: #6366f1;
+					--c2: #8b5cf6;
+					--c3: #f97316;
+					--c4: #ef4444;
+					--c5: #10b981;
+					--c6: #14b8a6;
+					--c7: #a855f7;
+					--c8: #f59e0b;
+					--c9: #fb7185;
 				}
 
 			* { box-sizing: border-box; }
@@ -53,12 +45,13 @@
 			
 			body 
 			{
+				margin: 0;
 				font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
 				background:
-						radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
-						radial-gradient(circle at top right, rgba(124,58,237,0.08), transparent 30%),
-						linear-gradient(180deg, #f8fbff 0%, #f4f7fb 100%);
-						color: var(--text);
+					radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
+					radial-gradient(circle at top right, rgba(124,58,237,0.08), transparent 30%),
+					linear-gradient(180deg, #f8fbff 0%, #f4f7fb 100%);
+				color: var(--text);
 				line-height: 1.55;
 			}
 
@@ -149,10 +142,11 @@
 
 			.hero-title-row h1 
 			{
-				margin: 0;
+				margin: 0 auto;
 				font-size: clamp(2.4rem, 5vw, 4rem);
 				line-height: 1.02;
 				letter-spacing: -0.05em;
+				text-align: center;
 			}
 
 			.hero-main 
@@ -167,6 +161,10 @@
 				border-radius: 28px;
 				box-shadow: var(--shadow);
 				padding: 2rem 2rem 1.6rem;
+				text-align: left;
+				display: flex;
+				flex-direction: column;
+				align-items: center;   
 			}
 
 			.eyebrow 
@@ -174,23 +172,28 @@
 				display: inline-flex;
 				align-items: center;
 				gap: .45rem;
+
 				background: rgba(37,99,235,0.10);
 				color: var(--primary);
 				border: 1px solid rgba(37,99,235,0.12);
 				border-radius: 999px;
+
 				padding: 0.45rem 0.85rem;
 				font-size: 0.86rem;
 				font-weight: 800;
 				letter-spacing: 0.01em;
-			}
 
+				margin-bottom: 10px; 
+				align-self: flex-start;
+			}
 			.hero-subtext 
 			{
-				max-width: none;
-				width: 100%;
+				text-align: center;
+				margin: 0 auto 12px;
+				max-width: 1200px;
 				color: var(--muted);
-				font-size: 1.03rem;
-				margin: 0 0 1.35rem;
+				font-size: 1rem;
+				line-height: 1.5;
 			}
 
 			.hero-banner 
@@ -537,6 +540,8 @@
 				font-size: 0.9rem;
 				font-weight: 650;
 				border: 1px solid transparent;
+				display: inline-flex;
+				align-items: center;
 			}
 
 			.pill.academic 
@@ -583,7 +588,7 @@
 				line-height:1.6;
 				box-shadow:0 8px 20px rgba(0,0,0,0.04);
 			}
-
+			
 			@media (max-width: 1180px) 
 			{
 				.workspace {
@@ -772,14 +777,40 @@
 				top:0;
 				z-index:1000;
 				padding:14px 24px;
-				background:#ffffff;
+				background:rgba(255,255,255,0.92);
 				border-bottom:1px solid #e5eaf5;
 				box-shadow:0 6px 16px rgba(0,0,0,.05);
+				backdrop-filter: blur(10px);
+			}
+
+			.top-nav-inner
+			{
+				width: min(calc(100% - 2rem), 1800px);
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+			.top-nav .brand
+			{
+				font-weight: 800;
+				color: var(--primary);
+				text-decoration: none;
+				letter-spacing: -0.02em;
+			}
+
+			.top-nav-links
+			{
+				display: flex;
+				gap: 18px;
+				align-items: center;
+				flex-wrap: wrap;
 			}
 
 			.top-nav a
 			{
-				margin-right:20px;
 				font-weight:700;
 				color:#2563eb;
 				text-decoration:none;
@@ -826,9 +857,14 @@
 	</head>
 	<body>
 		<nav class="top-nav">
-			<a href="index.html">Home</a>
-			<a href="maya.html">Maya's Journey &#8680;</a>
+			<div class="top-nav-inner">				
+				<div class="top-nav-links">
+					<a href="index.html">Home</a>
+					<a href="maya.html">Maya’s Journey &#8680;</a>
+				</div>
+			</div>
 		</nav>
+		
 		<div class="sub-nav">
 			<div class="sub-nav-inner">
 				<h2>Student Life Cycle Overview</h2>
@@ -917,18 +953,18 @@
 							</div>
 							<div class="detail-col">
 								<h4>Key Data Entities</h4>
-								<ul id="detailEntities"/>
+								<ul id="detailEntities"></ul>
 							</div>
 							<div class="detail-col">
 								<h4>Key Questions</h4>
-								<ul id="detailQuestions"/>
+								<ul id="detailQuestions"></ul>
 							</div>
 							<div class="detail-col">
 								<h4>Action Points</h4>
-								<ul id="detailActions"/>
+								<ul id="detailActions"></ul>
 							</div>
 						</div>
-						<div class="detail-note" id="detailNote"/>
+						<div class="detail-note" id="detailNote"></div>
 					</section>
 				</div>
 			</div>
